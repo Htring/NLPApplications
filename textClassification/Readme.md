@@ -1,0 +1,3 @@
+demo1使用的普通方法加载数据
+
+demo2使用的torchtext的方式加载数据
