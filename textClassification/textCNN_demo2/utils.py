@@ -9,6 +9,8 @@
 import numpy as np
 import torch
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 
 def en_seg(sentence):
     """
@@ -41,9 +43,9 @@ def train(model, train_data, optimizer, criterion):
     :return: 该论训练各批次正确率平均值
     """
     avg_acc = []
-    model.train()       # 进入训练模式
+    model.train()  # 进入训练模式
     for i, batch in enumerate(train_data):
-        pred = model(batch.text)
+        pred = model(batch.text.to(device)).cpu()
         loss = criterion(pred, batch.label.long())
         acc = binary_acc(torch.max(pred, dim=1)[1], batch.label)
         avg_acc.append(acc)
@@ -67,7 +69,7 @@ def evaluate(model, test_data):
     model.eval()  # 进入测试模式
     with torch.no_grad():
         for i, batch in enumerate(test_data):
-            pred = model(batch.text)
+            pred = model(batch.text.to(device)).cpu()
             acc = binary_acc(torch.max(pred, dim=1)[1], batch.label)
             avg_acc.append(acc)
     return np.array(avg_acc).mean()

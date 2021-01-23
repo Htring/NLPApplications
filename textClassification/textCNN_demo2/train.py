@@ -16,8 +16,10 @@ import config
 import dataloader
 import model
 import utils
+import time
 
 torch.manual_seed(config.RANDOM_SEED)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # 文本内容，使用自定义的分词方法，将内容转换为小写，设置最大长度等
 TEXT = data.Field(tokenize=utils.en_seg, lower=True, fix_length=config.MAX_SENTENCE_SIZE, batch_first=True)
@@ -64,7 +66,7 @@ train_iterator, test_iterator = data.BucketIterator.splits((train_data, test_dat
                                                            sort=False)
 
 # 创建模型
-text_cnn = model.TextCNN(len(TEXT.vocab), config.EMBEDDING_SIZE, len(LABEL.vocab))
+text_cnn = model.TextCNN(len(TEXT.vocab), config.EMBEDDING_SIZE, len(LABEL.vocab)).to(device)
 # 选取优化器
 optimizer = optim.Adam(text_cnn.parameters(), lr=config.LEARNING_RATE)
 # 选取损失函数
@@ -72,7 +74,7 @@ criterion = nn.CrossEntropyLoss()
 
 # 绘制结果
 model_train_acc, model_test_acc = [], []
-
+start = time.time()
 # 模型训练
 for epoch in range(config.EPOCH):
     train_acc = utils.train(text_cnn, train_iterator, optimizer, criterion)
@@ -84,6 +86,7 @@ for epoch in range(config.EPOCH):
     model_train_acc.append(train_acc)
     model_test_acc.append(test_acc)
 
+print('total train time:', time.time() - start)
 # 绘制训练过程
 plt.plot(model_train_acc)
 plt.plot(model_test_acc)

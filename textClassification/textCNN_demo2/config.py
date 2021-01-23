@@ -13,7 +13,7 @@ BATCH_SIZE = 128    # 批次数据大小
 LEARNING_RATE = 1e-3   # 学习率
 EMBEDDING_SIZE = 200   # 词向量维度
 MAX_SENTENCE_SIZE = 50  # 设置最大语句长度
-EPOCH = 20            # 训练测轮次
+EPOCH = 10            # 训练测轮次
 
 # 语料路径
 NEG_CORPUS_PATH = './corpus/neg.txt'
