@@ -21,3 +21,19 @@
 
 ## 4 推荐算法
 
+
+
+## N 语料数据集
+1. [https://github.com/SimmerChan/corpus](https://github.com/SimmerChan/corpus)
+2. [https://github.com/SophonPlus/ChineseNlpCorpus](https://github.com/SophonPlus/ChineseNlpCorpus)
+3. [https://github.com/liucongg/NLPDataSet](https://github.com/liucongg/NLPDataSet)
+4. [https://github.com/CLUEbenchmark/CLUEDatasetSearch](https://github.com/CLUEbenchmark/CLUEDatasetSearch)
+
+
+## 联系我
+
+1. 我的github：[https://github.com/Htring](https://github.com/Htring)
+2. 我的csdn：[科皮子菊](https://piqiandong.blog.csdn.net/)
+3. 我订阅号：AIAS编程有道
+   ![AIAS编程有道](https://s2.loli.net/2022/05/05/DS37LjhBQz2xyUJ.png)
+4. 知乎：[皮乾东](https://www.zhihu.com/people/piqiandong)
