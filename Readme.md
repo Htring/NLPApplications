@@ -11,7 +11,7 @@
 ## 2 命名实体识别
 1. 使用HMM处理NER任务:[https://github.com/Htring/HMM_NER](https://github.com/Htring/HMM_NER)
 2. 使用Bi-LSTM-CRF处理NER任务:[https://github.com/Htring/BiLSTM-CRF_NER_PL](https://github.com/Htring/BiLSTM-CRF_NER_PL)
-3. 
+3. 使用IDCNN-CRF处理NER任务：[https://github.com/Htring/IDCNN-CRF_NER_PL](https://github.com/Htring/IDCNN-CRF_NER_PL)
 
 ## 3 文本匹配
 
@@ -37,3 +37,4 @@
 3. 我订阅号：AIAS编程有道
    ![AIAS编程有道](https://s2.loli.net/2022/05/05/DS37LjhBQz2xyUJ.png)
 4. 知乎：[皮乾东](https://www.zhihu.com/people/piqiandong)
+
