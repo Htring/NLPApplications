@@ -12,6 +12,7 @@
 1. 使用HMM处理NER任务:[https://github.com/Htring/HMM_NER](https://github.com/Htring/HMM_NER)
 2. 使用Bi-LSTM-CRF处理NER任务:[https://github.com/Htring/BiLSTM-CRF_NER_PL](https://github.com/Htring/BiLSTM-CRF_NER_PL)
 3. 使用IDCNN-CRF处理NER任务：[https://github.com/Htring/IDCNN-CRF_NER_PL](https://github.com/Htring/IDCNN-CRF_NER_PL)
+4. 使用BERT-BiLSTM-CRF处理NER任务：[https://github.com/Htring/BERT-BiLSTM-CRF_PL](https://github.com/Htring/BERT-BiLSTM-CRF_PL)
 
 ## 3 文本匹配
 
