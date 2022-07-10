@@ -36,9 +36,10 @@
 
 ## 4 推荐算法
 
-## 5  知识图谱
+## 5 知识图谱
 
 ## 6 问答系统
+1. 基于红楼梦知识的问答系统：[https://github.com/Htring/KGQAHLM](https://github.com/Htring/KGQAHLM)
 
 ## N 语料数据集
 
